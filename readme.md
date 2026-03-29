@@ -24,19 +24,19 @@ You can install the required dependencies using pip:
 ## Required Execution Order
 To successfully run the agent and generate the required datasets and visualizations, the five Jupyter notebooks must be executed in the following sequential order:
 
-1. **`01_Data_Understanding_and_Preprocessing.ipynb`**
+1. **`1_Data_and_Preprocessing.ipynb`**
    * **Purpose:** Generates the `synthetic_tax_data.csv` file containing simulated user profiles, incomes, and standard deductions. Must be run first to provide data for subsequent scripts.
 
-2. **`02_Feature_Engineering_and_Agent_Workflow.ipynb`**
+2. **`2_Agent_workflow.ipynb`**
    * **Purpose:** Houses the core `TaxAdvisoryAgent` class. It performs the rule-based tax estimation, applies deduction logic, and outputs tailored recommendations for the user.
 
-3. **`03_Unsupervised_Modelling.ipynb`**
+3. **`3_Unsupervised_modelling.ipynb`**
    * **Purpose:** Ingests the synthetic data, scales the financial features, and applies K-Means clustering to group taxpayers into distinct financial profiles. Outputs `clustered_tax_data.csv`.
 
-4. **`04_Visualization_and_Analysis.ipynb`**
+4. **`4_Analysis.ipynb`**
    * **Purpose:** Reads the clustered dataset to generate visual interpretations, including scatter plots of income vs. investments and boxplots of medical deductions by cluster profile.
 
-5. **`05_Interpretation_and_Ethical_Relevance.ipynb`**
+5. **`5_Interpretation.ipynb`**
    * **Purpose:** Discusses the societal impact of the model, addresses potential biases in the synthetic data, and evaluates the ethical responsibilities of deploying an automated tax advisory agent.
 
 ## How to Use the Code
